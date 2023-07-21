@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" type="text/css"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/grid.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css" />
+	<title>Shop &#8212; Affiliate Marketing Website</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		switch (location.search) {
+			case '?product=TheUltimateKetoMealPlan':
+				location.replace("https://www.digistore24.com/redir/283755/sonjeebkumardas/");
+				break;
+			case '?selectedTab=SoundBoxes':
+				selectedTab = 'Sound Boxes';
+				musicSystems.classList.remove('active-tab');
+				soundBoxes.classList.add('active-tab');
+				headPhones.classList.remove('active-tab');
+				break;
+			case '?selectedTab=Headphones':
+				selectedTab = 'Headphones';
+				musicSystems.classList.remove('active-tab');
+				soundBoxes.classList.remove('active-tab');
+				headPhones.classList.add('active-tab');
+				break;
+			default:
+				selectedTab = 'Music Systems';
+				musicSystems.classList.add('active-tab');
+				soundBoxes.classList.remove('active-tab');
+				headPhones.classList.remove('active-tab');
+				alterURL(selectedTab);
+				break;
+		}
+	</script>
+</body>
+
+</html>
