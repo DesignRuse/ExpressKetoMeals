@@ -4,8 +4,17 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
 	<title>Express Keto Meals</title>
+	<style>
+		#preloader {
+			background: #fff url(./images/preloader.gif) no-repeat center;
+			background-size: 7%;
+			height: 100vh;
+			width: 100%;
+			position: fixed;
+			z-index: 100;
+		}
+	</style>
 </head>
 
 <body>
@@ -26,7 +35,7 @@
 				break;
 		}
 		var preLoader = document.getElementById('preloader');
-		window.addEventListener('load', function(){
+		window.addEventListener('load', function () {
 			preLoader.style.display = 'none';
 		});
 	</script>
