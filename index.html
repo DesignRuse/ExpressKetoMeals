@@ -5,14 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Express Keto Meals</title>
 		<script type="text/javascript">
-			const urlMap = {
-				'?TheUltimateKetoMealPlan': 'https://www.digistore24.com/redir/283755/sonjeebkumardas/',
-				'?KetoDesserts': 'https://www.digistore24.com/redir/292043/sonjeebkumardas/',
-				'?TheEssentialKetoCookbook': 'https://www.digistore24.com/redir/269221/sonjeebkumardas/',
-			};
+			const urlMap = new Map([
+			  ['?TheUltimateKetoMealPlan', 'https://www.digistore24.com/redir/283755/sonjeebkumardas/'],
+			  ['?KetoDesserts', 'https://www.digistore24.com/redir/292043/sonjeebkumardas/'],
+			  ['?TheEssentialKetoCookbook', 'https://www.digistore24.com/redir/269221/sonjeebkumardas/'],
+			]);
 			
 			const searchParam = location.search;
-			const redirectUrl = urlMap[searchParam] || 'https://www.digistore24.com/redir/283755/sonjeebkumardas/';
+			const redirectUrl = urlMap.get(searchParam) || 'https://www.digistore24.com/redir/283755/sonjeebkumardas/';
 			window.location.replace(redirectUrl);
 		</script>
 	</head>
