@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
 	padding: 0;
@@ -32,7 +32,7 @@ a:active {
 
 img {
 	max-width: 100%;
-}
+} */
 
 #preloader {
 	background: #fff url(../images/preloader.gif) no-repeat center;
