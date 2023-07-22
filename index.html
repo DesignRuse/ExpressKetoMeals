@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Express Keto Meals</title>
-	<style>
-		#preloader {
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Express Keto Meals</title>
+		<style>
+			#preloader {
 			background: #fff url(./images/preloader.gif) no-repeat center;
 			background-size: 7%;
 			height: 100vh;
 			width: 100%;
 			position: fixed;
 			z-index: 100;
-		}
-	</style>
-</head>
-
-<body>
-	<div id="preloader"></div>
-	<script type="text/javascript">
-		switch (location.search) {
-			case '?TheUltimateKetoMealPlan':
-				location.replace("https://www.digistore24.com/redir/283755/sonjeebkumardas/");
-				break;
-			case '?KetoDesserts':
-				location.replace("https://www.digistore24.com/redir/292043/sonjeebkumardas/");
-				break;
-			case '?TheEssentialKetoCookbook':
-				location.replace("https://www.digistore24.com/redir/269221/sonjeebkumardas/");
-				break;
-			default:
-				location.replace("https://www.digistore24.com/redir/283755/sonjeebkumardas/");
-				break;
-		}
-		var preLoader = document.getElementById('preloader');
-		window.addEventListener('load', function () {
-			preLoader.style.display = 'none';
-		});
-	</script>
-</body>
-
+			}
+		</style>
+	</head>
+	<body>
+		<div id="preloader"></div>
+		<script type="text/javascript">
+			const urlMap = {
+				'?TheUltimateKetoMealPlan': 'https://www.digistore24.com/redir/283755/sonjeebkumardas/',
+				'?KetoDesserts': 'https://www.digistore24.com/redir/292043/sonjeebkumardas/',
+				'?TheEssentialKetoCookbook': 'https://www.digistore24.com/redir/269221/sonjeebkumardas/',
+			};
+			
+			const searchParam = location.search;
+			const redirectUrl = urlMap[searchParam] || 'https://www.digistore24.com/redir/283755/sonjeebkumardas/';
+			location.replace(redirectUrl);
+			
+			document.addEventListener('DOMContentLoaded', function () {
+				var preLoader = document.querySelector('#preloader');
+				preLoader.style.display = 'none';
+			});
+		</script>
+	</body>
 </html>
